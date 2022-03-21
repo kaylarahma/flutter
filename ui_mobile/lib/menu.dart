@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Barang extends StatelessWidget {
+class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +15,9 @@ class Barang extends StatelessWidget {
         child: ListView(
           children: [
             Container(
-                margin: EdgeInsets.all(15),
-                padding: EdgeInsets.all(3),
-                height: 540,
+                margin: EdgeInsets.all(6),
+                padding: EdgeInsets.all(2),
+                height: 495,
                 width: 250,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -91,13 +91,6 @@ class Barang extends StatelessWidget {
                         DataCell(Text("Honda")),
                         DataCell(Text("Oli")),
                         DataCell(Text("TSM")),
-                      ],
-                    ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Icommit")),
-                        DataCell(Text("RJ54")),
-                        DataCell(Text("RPL")),
                       ],
                     ),
                   ],
