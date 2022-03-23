@@ -22,11 +22,11 @@ class _MainScreenState extends State<MainScreen> {
         currentIndex: _selectedIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.green.shade400,
+        unselectedItemColor: Colors.green.shade400,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
+            icon: Icon(Icons.home),
             label: 'Data Barang',
           ),
           BottomNavigationBarItem(

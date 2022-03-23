@@ -5,7 +5,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.lightBlueAccent.shade100,
+        color: Colors.green.shade300,
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -21,13 +21,13 @@ class Profile extends StatelessWidget {
               ),
             ),
             Container(
-                margin: EdgeInsets.all(25),
+                margin: EdgeInsets.all(15),
                 padding: EdgeInsets.all(10),
-                height: 230,
+                height: 280,
                 width: 350,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue.shade100,
+                  color: Colors.green.shade100,
                 ),
                 child: DataTable(
                   columns: <DataColumn>[
@@ -51,6 +51,13 @@ class Profile extends StatelessWidget {
                       cells: <DataCell>[
                         DataCell(Text("Alamat")),
                         DataCell(Text("JL.Sukamenak Bandung")),
+                      ],
+                    ),
+                    DataRow(
+                      cells: <DataCell>[
+                        DataCell(Text("Tujuan")),
+                        DataCell(Text("\n" +
+                            "Untuk memudahkan guru dan staf dalam mengelola pengadaan barang")),
                       ],
                     ),
                   ],

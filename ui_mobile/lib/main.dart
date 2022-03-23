@@ -11,14 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      initialBinding: ControllweBindings(),
       debugShowCheckedModeBanner: false,
       home: SplashScreenView(
-        navigateRoute: MainScreen(),
+        navigateRoute: UserScreen(),
         duration: 4000,
         imageSize: 200,
         imageSrc: "assets/img/dus.png",
-        backgroundColor: Colors.blue.shade100,
+        backgroundColor: Colors.green.shade100,
       ),
     );
   }

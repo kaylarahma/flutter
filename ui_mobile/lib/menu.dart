@@ -1,103 +1,167 @@
 import 'package:flutter/material.dart';
+import 'package:ui_mobile/supplier.dart';
+import 'supplier.dart';
+import 'satuan.dart';
+import 'kategori.dart';
+import 'barang.dart';
+import 'barang_keluar.dart';
+import 'barang_masuk.dart';
 
 class Menu extends StatelessWidget {
+  const Menu({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Pengadaan Barang'),
         centerTitle: true,
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: Colors.green.shade400,
       ),
-      body: Container(
-        color: Colors.lightBlueAccent,
-        alignment: Alignment.center,
-        child: ListView(
-          children: [
+      body: ListView(children: <Widget>[
+        Column(
+          children: <Widget>[
             Container(
-                margin: EdgeInsets.all(6),
-                padding: EdgeInsets.all(2),
-                height: 495,
-                width: 250,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.blue.shade100,
-                ),
-                child: DataTable(
-                  columns: const <DataColumn>[
-                    DataColumn(label: Text("Supplier")),
-                    DataColumn(label: Text("Barang")),
-                    DataColumn(label: Text("Kategori")),
-                  ],
-                  rows: const <DataRow>[
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Icommit")),
-                        DataCell(Text("Komputer")),
-                        DataCell(Text("RPL")),
-                      ],
+              padding: EdgeInsets.fromLTRB(10, 10, 7, 10),
+              width: 450,
+              height: 90,
+              child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green.shade100,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Mitshubitsi")),
-                        DataCell(Text("Lampu Sen")),
-                        DataCell(Text("TKR")),
-                      ],
+                  ),
+                  child: Text(
+                    "Data Supplier",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Supplier(),
+                        ));
+                  }),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(10, 10, 7, 10),
+              width: 450,
+              height: 90,
+              child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green.shade100,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Honda")),
-                        DataCell(Text("Klakson")),
-                        DataCell(Text("TSM")),
-                      ],
+                  ),
+                  child: Text(
+                    "Data Satuan",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Satuan(),
+                        ));
+                  }),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(10, 10, 7, 10),
+              width: 450,
+              height: 90,
+              child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green.shade100,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Icommit")),
-                        DataCell(Text("CPU")),
-                        DataCell(Text("RPL")),
-                      ],
+                  ),
+                  child: Text(
+                    "Data Kategori",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Kategori(),
+                        ));
+                  }),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(10, 10, 7, 10),
+              width: 450,
+              height: 90,
+              child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green.shade100,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Mitshubitsi")),
-                        DataCell(Text("Ban")),
-                        DataCell(Text("TKR")),
-                      ],
+                  ),
+                  child: Text(
+                    "Data Barang",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Barang(),
+                        ));
+                  }),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(10, 10, 7, 10),
+              width: 450,
+              height: 90,
+              child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green.shade100,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Honda")),
-                        DataCell(Text("Rante")),
-                        DataCell(Text("TSM")),
-                      ],
+                  ),
+                  child: Text(
+                    "Data Barang Masuk",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Barang_Masuk(),
+                        ));
+                  }),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(10, 10, 7, 10),
+              width: 450,
+              height: 90,
+              child: TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green.shade100,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Icommit")),
-                        DataCell(Text("Keyboard")),
-                        DataCell(Text("RPL")),
-                      ],
-                    ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Mitshubitsi")),
-                        DataCell(Text("Jok Depan")),
-                        DataCell(Text("TKR")),
-                      ],
-                    ),
-                    DataRow(
-                      cells: const <DataCell>[
-                        DataCell(Text("Honda")),
-                        DataCell(Text("Oli")),
-                        DataCell(Text("TSM")),
-                      ],
-                    ),
-                  ],
-                ))
+                  ),
+                  child: Text(
+                    "Data Barang Keluar",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Barang_keluar(),
+                        ));
+                  }),
+            ),
           ],
         ),
-      ),
+      ]),
     );
   }
 }
